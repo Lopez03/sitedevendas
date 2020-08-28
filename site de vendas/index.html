@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<title></title>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='estilos.css'>
+  </head>
+
+  <body>
+      <ul class='productlist' id='listadeprodutos'>
+
+      </ul>
+
+        <script>
+            var produtos = [
+                {
+                     "nome" : "Headset",
+                     "img" : "https://lojamultilaser.vteximg.com.br/arquivos/ids/178660-430-430/ph251_01.jpg?v=636616750989370000",
+                     "preco" : "R$ 259,90"
+                },
+                {
+                     "nome" : "Mouse Gamer",
+                     "img" : "https://img.terabyteshop.com.br/banner/1041.jpg",
+                     "preco" : "R$ 29,90"
+                },
+                {
+                    "nome" : "Teclado Gamer",
+                    "img" : "https://http2.mlstatic.com/D_NQ_NP_875384-MLA32834052238_112019-O.webp",
+                    "preco" : "59,90"
+                },
+                {
+                    "nome" : "Mousepad Gamer",
+                    "img" : "https://www.extra-imagens.com.br/acessorioseinovacoes/AcessoriosePerifericos/Mouse_Pad/12770821/1006021787/mousepad-ergonomico-de-espuma-preto-24x22x12cm-1123-work-class-12770821.jpg",
+                    "preco" : ""
+                }
+            ];
+
+            function listarprodutos(){
+                var elemento = document.getElementById("listadeprodutos");
+                var html = ""
+
+                produtos.forEach((produto) => {
+                    html+= "<li class='produto'>"
+                    html+= "<img src='"+produto.img+"' style='border-radius: 30px'>"
+                    html+= "<h2>"+produto.nome+"</h2>"
+                    html+= "</a></li>"
+                });
+
+                elemento.innerHTML = html;
+            }
+
+            listarprodutos()    
+
+        </script>
+
+  </body>
+</html>
